@@ -18116,9 +18116,7 @@ module.exports = [
 
 var _templateObject = _taggedTemplateLiteral(['<footer class="site-footer">\n  <div class="container">\n    <div class="row">\n      <div class="col s12 l3 center-align"><a href="#" data-activates="dropdown1" class="dropdown-button btn btn-flat">', '</a>\n        <ul id="dropdown1" class="dropdown-content">\n          <li><a href="#!" onclick=', ' >', '</a></li>\n          <li><a href="#!" onclick=', '>', '</a></li>\n        </ul>\n      </div>\n      <div class="col s12 l3 push-l6 center-align">© 2016 - Platzigram</div>\n    </div>\n  </div>\n</footer>'], ['<footer class="site-footer">\n  <div class="container">\n    <div class="row">\n      <div class="col s12 l3 center-align"><a href="#" data-activates="dropdown1" class="dropdown-button btn btn-flat">', '</a>\n        <ul id="dropdown1" class="dropdown-content">\n          <li><a href="#!" onclick=', ' >', '</a></li>\n          <li><a href="#!" onclick=', '>', '</a></li>\n        </ul>\n      </div>\n      <div class="col s12 l3 push-l6 center-align">© 2016 - Platzigram</div>\n    </div>\n  </div>\n</footer>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var translate = require('../translate');
@@ -18137,9 +18135,7 @@ document.body.appendChild(el);
 
 var _templateObject = _taggedTemplateLiteral(['<nav class="header">\n\t\t<div class="nav-wrapper">\n\t\t\t<div class="container">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col s12 m6 offset-m1">\n\t\t\t\t\t\t<a href="/" class="brand-logo platzigram">Platzigram</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="col s2 m6 push-s10 push-m10">\n\t\t\t\t\t\t<a href="#" class="btn btn-large btn-flat dropdown-button" data-activates="drop-user">\n\t\t\t\t\t\t\t<i class="fa fa-user" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id="drop-user" class="dropdown-content">\n\t\t\t\t\t\t\t<li><a href="#">', '</a></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>'], ['<nav class="header">\n\t\t<div class="nav-wrapper">\n\t\t\t<div class="container">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col s12 m6 offset-m1">\n\t\t\t\t\t\t<a href="/" class="brand-logo platzigram">Platzigram</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="col s2 m6 push-s10 push-m10">\n\t\t\t\t\t\t<a href="#" class="btn btn-large btn-flat dropdown-button" data-activates="drop-user">\n\t\t\t\t\t\t\t<i class="fa fa-user" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id="drop-user" class="dropdown-content">\n\t\t\t\t\t\t\t<li><a href="#">', '</a></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var translate = require('../translate');
@@ -18251,16 +18247,15 @@ function asyncLoad(ctx, next) {
 },{"../header":368,"./template":370,"axios":1,"empty-element":319,"page":350,"superagent":353,"title":359}],370:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="container timeline">\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n\t\t\t\t<form enctype="multipart/form-data" class="form-upload">\n\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3">\n\t\t\t\t', '\n\t\t\t</div>\n\t\t</div>\n\t</div>'], ['<div class="container timeline">\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n\t\t\t\t<form enctype="multipart/form-data" class="form-upload">\n\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3">\n\t\t\t\t', '\n\t\t\t</div>\n\t\t</div>\n\t</div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="container timeline">\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n\t\t\t\t<form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n\t\t\t\t\t<div id="fileName" class="fileUpload btn btn-flat cyan">\n\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i class="fa fa-camera" aria-hidden="true"></i> ', '\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<input name="picture" id="file" type="file" class="upload" onchange=', '/>\n\t\t\t\t\t</div>\n\t\t\t\t\t<button id="btnUpload" type="submit" class="btn btn-flat cyan hide">\n\t\t\t\t\t\t', '\n\t\t\t\t\t</button>\n\t\t\t\t\t<button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '>\n\t\t\t\t\t\t<i class="fa fa-times" aria-hidden="true"></i>\n\t\t\t\t\t</button>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3">\n\t\t\t\t', '\n\t\t\t</div>\n\t\t</div>\n\t</div>'], ['<div class="container timeline">\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n\t\t\t\t<form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n\t\t\t\t\t<div id="fileName" class="fileUpload btn btn-flat cyan">\n\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i class="fa fa-camera" aria-hidden="true"></i> ', '\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<input name="picture" id="file" type="file" class="upload" onchange=', '/>\n\t\t\t\t\t</div>\n\t\t\t\t\t<button id="btnUpload" type="submit" class="btn btn-flat cyan hide">\n\t\t\t\t\t\t', '\n\t\t\t\t\t</button>\n\t\t\t\t\t<button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '>\n\t\t\t\t\t\t<i class="fa fa-times" aria-hidden="true"></i>\n\t\t\t\t\t</button>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="row">\n\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3">\n\t\t\t\t', '\n\t\t\t</div>\n\t\t</div>\n\t</div>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var layout = require('../layout');
 var picture = require('../picture-cards');
 var translate = require('../translate');
+var request = require('superagent');
 //utilizar yo-yo
 //module.exports =Se le asigna lo que tenga yo-yo, variable de JS, dividir en modulos o archivos con diferentes responnsabilidades
 //el modulo $pictures.map devuelve una funcion o array
@@ -18269,15 +18264,50 @@ var translate = require('../translate');
 //la propiedad de enctype del form sirve para que el servidore traduzca la informacion que reciba del formulario
 
 module.exports = function (pictures) {
-	var element = yo(_templateObject, pictures.map(function (pic) {
+	var element = yo(_templateObject, onsubmit, translate.mensaje('upload-picture'), onchange, translate.mensaje('upload'), cancel, pictures.map(function (pic) {
 		return picture(pic);
 	}));
 
+	//la capacidad de los toglebuttons para cambiar de referencia de hide a visible o viceversa
+	function toggleButtons() {
+		document.getElementById('fileName').classList.toggle('hide');
+		document.getElementById('btnUpload').classList.toggle('hide');
+		document.getElementById('btnCancel').classList.toggle('hide');
+	}
+
+	//la funcion cancel para que se resetee nuetro formulario y vuelva al boton de subir foto
+	function cancel() {
+		toggleButtons();
+		document.getElementById('formUpload').reset();
+	}
+
+	//cambiar el hide de los botones, si tiene hide es hace visible, o viceversa
+	function onchange() {
+		toggleButtons();
+	}
+
+	//necesitara el evento para disparar la accion
+	//no disparará el request por default sino que se hara de otra forma
+	function onsubmit(ev) {
+		ev.preventDefault();
+		//el evento submit que recibira el formulario con this ya que es el mismo formulario que lo dispara
+		var data = new FormData(this);
+		//se envia esta data
+		//api/pictures devuelve la ruta que estaban las fotos
+		request.post('/api/pictures')
+		//la data para que el backend la procese
+		.send(data)
+		//el end es saber el error y la respuesta
+		.end(function (err, res) {
+			//este nombre aparte de parametros son argumentos incluidos de forma implicita con un array de todos los elementos
+			console.log(arguments);
+		});
+	}
 	//este lo envia a layout a homepage
 	return layout(element);
 };
 
-},{"../layout":373,"../picture-cards":374,"../translate":381,"yo-yo":360}],371:[function(require,module,exports){
+},{"../layout":373,"../picture-cards":374,"../translate":381,"superagent":353,"yo-yo":360}],371:[function(require,module,exports){
 'use strict';
 
 /*var numeros=[400,200,1,-23];
@@ -18289,7 +18319,6 @@ var numerosMas1=numeros.map(function(numero){
 /*var numerosMas1=numeros.map(n => n+1);
 
 console.log(numerosMas1);*/
-
 require('babel-polyfill');
 var page = require('page');
 
@@ -18305,9 +18334,7 @@ page();
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container landing">\n\t\t<div class="row">\n\t\t\t<div class="col s10 push-s1">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col m5 hide-on-small-only">\n\t\t\t\t\t\t<img class="iphone" src="iphone.png">\n\t\t\t\t\t</div>\n\t\t\t\t\t', '\n\t\t\t\t</div>\t\n\t\t\t</div>\n\t\t</div>\n\t</div>'], ['<div class="container landing">\n\t\t<div class="row">\n\t\t\t<div class="col s10 push-s1">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col m5 hide-on-small-only">\n\t\t\t\t\t\t<img class="iphone" src="iphone.png">\n\t\t\t\t\t</div>\n\t\t\t\t\t', '\n\t\t\t\t</div>\t\n\t\t\t</div>\n\t\t</div>\n\t</div>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 //utilizar yo-yo
@@ -18323,9 +18350,7 @@ module.exports = function landing(box) {
 
 var _templateObject = _taggedTemplateLiteral(['<div class="content">\n\t\t\t', '\n\t\t</div>'], ['<div class="content">\n\t\t\t', '\n\t\t</div>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var translate = require('../translate');
@@ -18342,9 +18367,7 @@ module.exports = function layout(content) {
 
 var _templateObject = _taggedTemplateLiteral(['<div class="card ', '">\n    <div class="card-image">\n      <img class="activator" src="', '">\n    </div>\n    <div class="card-content">\n      <a href="/user/', '" class="card-title">\n        <img src="', '" class="avatar"/>\n        <span class="username">', '</span>\n      </a>\n      <small class="right time">', '</small>\n      <p>\n        <a class="left" href="#" onclick=', '>\n          <i class="fa fa-heart-o" aria-hidden="true"></i>\n        </a>\n        <a class="left" href="#" onclick=', '>\n          <i class="fa fa-heart" aria-hidden="true"></i>\n        </a>\n        <span class="left likes">', '</span>\n      </p>\n    </div>\n  </div>'], ['<div class="card ', '">\n    <div class="card-image">\n      <img class="activator" src="', '">\n    </div>\n    <div class="card-content">\n      <a href="/user/', '" class="card-title">\n        <img src="', '" class="avatar"/>\n        <span class="username">', '</span>\n      </a>\n      <small class="right time">', '</small>\n      <p>\n        <a class="left" href="#" onclick=', '>\n          <i class="fa fa-heart-o" aria-hidden="true"></i>\n        </a>\n        <a class="left" href="#" onclick=', '>\n          <i class="fa fa-heart" aria-hidden="true"></i>\n        </a>\n        <span class="left likes">', '</span>\n      </p>\n    </div>\n  </div>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var translate = require('../translate');
@@ -18422,9 +18445,7 @@ page('/signin', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">\n\t\t\t\t\t\t\t\t\tPlatzigram\n\t\t\t\t\t\t\t\t</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form">\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-small-only">\n\t\t\t\t\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up">\n\t\t\t\t\t\t\t\t\t\t\t<i class="fa fa-facebook-official"></i>', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-lights btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signup">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'], ['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">\n\t\t\t\t\t\t\t\t\tPlatzigram\n\t\t\t\t\t\t\t\t</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form">\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-small-only">\n\t\t\t\t\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up">\n\t\t\t\t\t\t\t\t\t\t\t<i class="fa fa-facebook-official"></i>', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-lights btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signup">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var landing = require('../landing');
@@ -18459,9 +18480,7 @@ page('/signup', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">\n\t\t\t\t\t\t\t\t\tPlatzigram\n\t\t\t\t\t\t\t\t</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form">\n\t\t\t\t\t\t\t\t\t<h2>', '</h2>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-small-only">\n\t\t\t\t\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up">\n\t\t\t\t\t\t\t\t\t\t\t<i class="fa fa-facebook-official"></i>', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="email" name="email" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="name" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-lights btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="./signin">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'], ['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">\n\t\t\t\t\t\t\t\t\tPlatzigram\n\t\t\t\t\t\t\t\t</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form">\n\t\t\t\t\t\t\t\t\t<h2>', '</h2>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-small-only">\n\t\t\t\t\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up">\n\t\t\t\t\t\t\t\t\t\t\t<i class="fa fa-facebook-official"></i>', '\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="email" name="email" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="name" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '">\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-lights btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="./signin">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var landing = require('../landing');
@@ -18536,7 +18555,6 @@ module.exports = {
 'use strict';
 
 //Este if es para agregar los pollysh de safari
-
 if (!window.Intl) {
 		window.Intl = require('intl');
 		require('intl/locale-data/jsonp/en-US.js');

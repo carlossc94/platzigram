@@ -1,7 +1,25 @@
 //Tener una variable express que busca dentro de los modulos express
 var express =require ('express');
+//el uso de multer
+var multer=require('multer');
+//uso de file extension
+var ext=require('file-extension');
+//storage para almacenar el archivo en una carpete especifica
+var storage=multer.diskStorage({
+	destination: function(req, file, cb){
+		cb(null,'./uploads')
+	},
+	filename:function (req,file,cb){
+		cb(null,Date.now()+'.'+ext(file.originalname));
+	}
+})
+
+//devolver el valor mediante el template de donde se encuentre picture
+var upload=multer({storage: storage}).single('picture');
+
 //es una funcion ya que contiene ().
 var app=express();
+
 
 //Entregar vistas y utilizar pug como dependecnia para procesarla
 app.set('view engine', 'pug');
@@ -66,10 +84,18 @@ app.get('/api/pictures', function(req, res, next){
 	setTimeout(function(){
 		res.send(pictures);
 	},2000);
+});
 
-	
-
-})
+//uso final del app en multer
+app.post('/api/pictures',function(req, res){
+	//parametro que se va a buscar
+	upload(req,res, function(err){
+		if(err){
+			return res.send(500,"Error Uploading File");
+		}
+		res.send("File Upload Successful");
+	})
+});
 
 app.listen(3000, function(err){
 	if(err) return console.log("Hubo algun error"), process.exit(1);
