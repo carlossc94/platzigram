@@ -5,6 +5,8 @@ var title=require('title');
 var request=require('superagent');
 var header=require('../header');
 var axios=require('axios');
+var Webcam=require('webcamjs');
+var picture=require('../picture-cards');
 
 page('/',header,asyncLoad,function(ctx, next){
 	title('Platzigram');
@@ -13,6 +15,73 @@ page('/',header,asyncLoad,function(ctx, next){
 //agregar a la variable main un hijo en la cual es todo lo que esta en elemen
 	vacio(main).appendChild(template(ctx.pictures));
 
+	//se agrgara las constantes en la cual se agregara la funcionalidad de la camara
+	//es el llamado de constantes del dom que se encuenta en el template (id)
+	const picturePreview=$('#picture-preview');
+	const camaraInput=$('#camara-input');
+	const cancelPicture=$('#cancelPicture');
+	const shootButton=$('#shoot');
+	const uploadButton=$('#uploadButton');
+
+
+	//funcion para devolver los estados que tenian anteriormente los botones y etiquetas de html en el template
+	function reset(){
+		picturePreview.addClass('hide');
+	    cancelPicture.addClass('hide');
+	    uploadButton.addClass('hide');
+	    shootButton.removeClass('hide');
+	    camaraInput.removeClass('hide');
+	}
+
+	//cuando se oprima el cancel picture se resetea
+	cancelPicture.click(reset);
+
+	//Agregar o llamar el disparador y llamar al dom que tenga la clase y abra el modal
+	$('.modal-trigger').leanModal({
+		ready:function(){
+			Webcam.attach('#camara-input');
+			//cuando se haga click al boton de tomar foto
+			shootButton.click((ev)=>{
+				Webcam.snap( function(data_uri) {
+					//cambiar la propiedad de picture preview agregando un enlace que debe ser en el estilo de ecmascript 2015 (literal strings)
+					//los demas son los botones que se habia asignado en el template para la funcionalidad
+					//remove class (Quita la clase de hide), addClass (le pone la clase hide)
+	        		picturePreview.html (`<img src="${data_uri}"/>`);
+	        		picturePreview.removeClass('hide');
+	        		cancelPicture.removeClass('hide');
+	        		uploadButton.removeClass('hide');
+	        		shootButton.addClass('hide');
+	        		camaraInput.addClass('hide');
+	        		//quitar las funcionalidades de click usadas antereriormente en shoot y uploadbutton
+	        		uploadButton.off('click')
+	        		//funciona anonima en el boton de upload boton
+	        		//se le pasara un objeto tipo JSON con los datos de una picture card definida anteriormente
+	        		uploadButton.click(()=> {
+	        			const pic={
+	        				user:{
+								username:'Soberanis_Car',
+								avatar:'https://scontent-dfw1-1.xx.fbcdn.net/v/t1.0-9/12540888_10201196251264580_4577950889139395794_n.jpg?oh=d026ae60ab21ca7c721954d1a03adf8d&oe=5808AC6E'
+							},
+							url:data_uri,
+							likes:0,
+							liked:false,
+							createdAt: +new Date()
+						}
+
+						//definir el uso de id de pircture-cards y agregarle el picture para hacer el map en el template
+						//prepend sirve para que vaya de primero en el array
+						$('#picture-cards').prepend(picture(pic));
+						$('#modalCamara').closeModal(Webcam.reset());
+						reset();
+	        		})
+    			})
+			})
+		},
+		complete:function(){
+			Webcam.reset();
+			reset();
+		}
+	})
 })
 
 // en un callback como buena practica es necesario llamar primero el error

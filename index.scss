@@ -146,3 +146,35 @@ $avatar-size:48px;
 	}
 }
 
+#modalCamara {
+  .camara-picture {
+    width: 460px;
+    height: 345px;
+    margin: 0 auto;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      width: 460px;
+      height: 345px;
+      top: 0;
+      transition: all .5s ease;
+      opacity: 1;
+    }
+
+    .overlay {
+      opacity: 0;
+    }
+
+    img {
+   	  position: relative;
+      width: 460px;
+      height: 345px;
+    }
+  }
+
+  button {
+    float: none;
+  }
+}
+
